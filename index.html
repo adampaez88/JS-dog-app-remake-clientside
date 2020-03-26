@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="dog-header">
+            <h1>Dog App</h1>
+        </header>
+        <div class="login-status-div">
+            <h5 class="login-status">Logged in? <span>No</span></h5>
+            <button class="logout">Logout</button>
+        </div>
+
+        <h2>Sign Up</h2>
+        <form class="signup" >
+            <input type="text" name="username" placeholder="Username" required/>
+            <input type="text" name="email" placeholder="Email" required/>
+            <input type="text" name="password" placeholder="Password" required/>
+            <input type="submit" value="sign up" />
+            <p class="message"></p>
+        </form>
+        
+        <h2>Login</h2>
+        <form class="login" >
+            <input type="text" name="username" placeholder="Username" required/>
+            <input type="text" name="password" placeholder="Password" required/>
+            <input type="submit" value="login" />
+            <p class="message"></p>
+        </form>
+
+        <h2>Add Dog</h2>
+        <form class="dog-form" >
+            <input type="text" name="breed" placeholder="breed" required/>
+            <input type="text" name="info" placeholder="info" required/>
+            <input type="text" name="image_url" placeholder="image_url" required/>
+            <input type="text" name="description" placeholder="description" required/>
+            <input type="submit" value="Add Dog" />
+        </form>
+
+        <section class="dog-section">
+
+        </section>
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
