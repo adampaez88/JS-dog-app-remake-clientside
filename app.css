@@ -1,15 +1,25 @@
-.login-status-div {
+.dog-header {
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
 }
 
 .logout {
-    border-radius: 10%;
-    margin-left: 2%;
-    width: 5%;
-    height: 5%;
-    margin-top: 1.4%;
+    border-radius: 10%; margin: 1%;
+}
+
+.section-header {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.dog-section {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid;
+    border-style: groove;
+    box-shadow: beige;
+    border-right: inset;
 }
 
 .dog-div > img {
@@ -21,17 +31,13 @@
     box-sizing: border-box;
     border: solid;
     border-radius: 15%;
-    background: rgb(133, 131, 131);
-    width: 20%;
+    background-color: rgb(192, 193, 194);
+    width: 40%;
     margin: 5%;
     padding: 3%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.dog-section {
-    display: flex;
-    flex-wrap: wrap;
+    background-clip: content-box;
 }
