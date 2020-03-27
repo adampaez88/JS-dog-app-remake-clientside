@@ -22,7 +22,6 @@ $dogForm.addEventListener('submit', event => {
 })
 
 
-
 const $dogContainer = document.querySelector('.dog-section')
 fetch('http://localhost:3000/dogs')
 .then(response => response.json())
@@ -48,10 +47,6 @@ function dogToDiv(dog){
     $aDogsDiv.append($dogBreed, $dogPic, $dogInfo, $dogDescription)
     $dogContainer.append($aDogsDiv)
 }
-
-// function appendDogToDiv($section){
-//     return $dogDiv => $section.append($dogDiv)
-// }
 
 // sign up
 const $signupForm = document.querySelector('.signup')
