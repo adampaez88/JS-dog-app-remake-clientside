@@ -36,7 +36,7 @@ function dogToDiv(dog){
 
     const $dogBreed = document.createElement('h1')
     const $dogPic = document.createElement('img')
-    const $dogInfo = document.createElement('h4')
+    const $dogInfo = document.createElement('p')
     const $dogDescription = document.createElement('h5')
 
     $dogBreed.textContent = dog.breed

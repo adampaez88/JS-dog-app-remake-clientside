@@ -8,38 +8,46 @@
     </head>
     <body>
         <header class="dog-header">
-            <h1>Dog App</h1>
+            <h1 class="app-title">Dog App</h1>
             <div class="login-status-div">
                 <h5 class="login-status">Logged in? <span>No</span></h5>
                 <button class="logout">Logout</button>
             </div>
         </header>
 
-        <h2>Sign Up</h2>
-        <form class="signup" >
-            <input type="text" name="username" placeholder="Username" required/>
-            <input type="text" name="email" placeholder="Email" required/>
-            <input type="text" name="password" placeholder="Password" required/>
-            <input type="submit" value="sign up" />
-            <p class="message"></p>
-        </form>
-        
-        <h2>Login</h2>
-        <form class="login" >
-            <input type="text" name="username" placeholder="Username" required/>
-            <input type="text" name="password" placeholder="Password" required/>
-            <input type="submit" value="login" />
-            <p class="message"></p>
-        </form>
+        <div class="auth-div">
+            <div>
+                <h2>Sign Up</h2>
+                <form class="signup" >
+                    <input type="text" name="username" placeholder="Username" required/>
+                    <input type="text" name="email" placeholder="Email" required/>
+                    <input type="text" name="password" placeholder="Password" required/>
+                    <input type="submit" value="Sign Up" class="submit-button"/>
+                    <p class="message"></p>
+                </form>
+            </div>
+            
+            <div>
+                <h2>Login</h2>
+                <form class="login" >
+                    <input type="text" name="username" placeholder="Username" required/>
+                    <input type="text" name="password" placeholder="Password" required/>
+                    <input type="submit" value="Login" class="submit-button"/>
+                    <p class="message"></p>
+                </form>
+            </div>
+        </div>
 
-        <h2>Add Dog</h2>
-        <form class="dog-form" >
-            <input type="text" name="breed" placeholder="breed" required/>
-            <input type="text" name="info" placeholder="info" required/>
-            <input type="text" name="image_url" placeholder="image_url" required/>
-            <input type="text" name="description" placeholder="description" required/>
-            <input type="submit" value="Add Dog" />
-        </form>
+        <div class="dog-form-container">
+            <h2>Add Dog</h2>
+            <form class="dog-form" >
+                <input type="text" name="breed" placeholder="breed" required/>
+                <input type="text" name="info" placeholder="info" required/>
+                <input type="text" name="image_url" placeholder="image_url" required/>
+                <input type="text" name="description" placeholder="description" required/>
+                <input type="submit" value="Add Dog" class="submit-button"/>
+            </form>
+        </div>
 
         <h1 class="section-header">Dogs</h1>
         <section class="dog-section">

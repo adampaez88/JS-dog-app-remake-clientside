@@ -1,0 +1,38 @@
+.dog-name-header {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin: 1%; */
+    background-color: aliceblue;
+
+}
+
+.home {
+    height: 2rem;
+    margin-top: 2%;
+    border-radius: 30%;
+    font-weight: 700;
+}
+
+.dog-description {
+    text-align: center;
+    font-weight: 500;
+    margin: 10%
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dogs-pic {
+    height: 20rem;
+    width: 20rem;
+    align-self: center;
+    border: inset;
+    margin-bottom: 3%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
