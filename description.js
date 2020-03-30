@@ -14,8 +14,8 @@ function showDescription(dog){
 
     const $dogPic = document.querySelector('.dogs-pic')
     $dogPic.src = dog.image_url
-    console.log(dog)
 }
+
 
 
 fetch('http://localhost:3000/comments')
@@ -24,7 +24,8 @@ fetch('http://localhost:3000/comments')
         response.comments
         .map(commentToLi)
         .forEach(appendComment($commentList))
-    });;
+        addComments()
+    })
 
 
 function commentToLi(comment){
@@ -37,29 +38,43 @@ const $commentList = document.querySelector('.comment-list')
 function appendComment($list){
     return $li => $list.append($li)
 }
+  
+
 
 const $commentForm = document.querySelector('.comment-form')
-$commentForm.addEventListener('submit', event => {
-    event.preventDefault()
+function addComments(){
+    $commentForm.addEventListener('submit', event => {
+        event.preventDefault()
 
-    const formData = new FormData(event.target)
-    const comment = {
-        content: formData.get('content')
-    }
+        const formData = new FormData(event.target)
+        const comment = {
+            content: formData.get('content')
+        }
 
-    fetch('http://localhost:3000/comments', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `bearer ${localStorage.getItem('token')}`,
-            'dog_id': `${id}`
-        },
-        body: JSON.stringify(comment)
-    }).then(response => response.json())
-    .then(response => {
-        const $li = commentToLi(response)
-        appendComment($commentList)($li)
-    })
     
-})
+        fetch('http://localhost:3000/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({
+                'content': comment.content,
+                'dog_id': `${id}`,
+                'user_id': `${comment.user_id}`
+            })
+        }).then(response => response.json())
+        .then(response => {
+            console.log(response)
+            const $li = commentToLi(response.comment.content)
+            appendComment($commentList)($li)
+
+            const li = response.comment.content
+            $commentList.append(li)
+        })
+        
+    })
+}
+
+
 

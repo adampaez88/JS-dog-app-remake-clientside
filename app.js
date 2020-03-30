@@ -92,6 +92,7 @@ $loginForm.addEventListener('submit', event => {
     }).then(response => response.json())
     .then(response => {
         localStorage.setItem('token', response.token)
+        // localStorage.setItem('user_id', response.user_id)
         checkLoginStatus()
 
         const $message = document.querySelector('.login .message')
@@ -111,5 +112,6 @@ checkLoginStatus()
 const $logout = document.querySelector('.logout')
 $logout.addEventListener('click', event => {
     localStorage.removeItem('token')
+    // localStorage.removeItem('user_id')
     checkLoginStatus()
 })
